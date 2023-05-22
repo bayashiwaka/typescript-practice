@@ -1,0 +1,21 @@
+{
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        //ある程度厳しいルールをまとめて設定してくれている。strictはtrueのほうがいいが、
+        //既存のJavascriptコードをTypeScriptに移行する際にいきなりtrueでやると
+        //エラーが出まくるので最初falseにしてある程度できてからtrueにしたほうがいい場合もあり。
+        //変数の型を自分で指定しなければならず、推測はしてやらないぞという厳しいルール
+        "strict": true,
+        //any型の推測だけをオフにする設定
+        "noImplicityAny": false,
+        "esModuleInterop": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "jsx": "react-jsx"
+    }
+}
+//プロジェクトに応じてtsconfigの設定をいじるとヨシ。
